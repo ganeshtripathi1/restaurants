@@ -1,1 +1,10 @@
-<h1>Welcome to Restaurant Application!!!!!</h1>
+
+<app-header *ngIf="api.getUserLoginStatus()"></app-header>
+ <app-admin-header *ngIf="api.getAdminLoginStatus()"></app-admin-header>
+<app-navbar *ngIf="api.getUserLoginStatus()"></app-navbar>
+<app-admin-navbar  *ngIf="api.getAdminLoginStatus()"></app-admin-navbar>
+
+<router-outlet></router-outlet>
+ 
+
+

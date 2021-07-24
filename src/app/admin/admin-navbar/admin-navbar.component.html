@@ -6,24 +6,21 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" routerLink="/mixfood">Home</a>
+          <a class="nav-link" routerLink="/admin/dashboard">Dasboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/chinese">Chinese Food</a>
+          <a class="nav-link" routerLink="/admin/addfood"> Add Food</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/local">Local Food</a>
+          <a class="nav-link" routerLink="/chinese">Manage Chinese Food</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/local"> Manage Local Food</a>
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-
+        
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="UserLogout()">Log Out</a>
+            <a class="nav-link" (click)="adminLogout()" >Log Out</a>
           </li>
         
       </ul>

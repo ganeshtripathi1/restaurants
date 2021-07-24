@@ -1,0 +1,13 @@
+#mixfoddlisting
+{
+    background-color: aliceblue;
+}
+
+
+.content{
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding: 3px 5px;
+    position: relative;
+    overflow-y: auto;
+  }
