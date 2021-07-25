@@ -1,3 +1,4 @@
+import { ApiService } from './../../services/api.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,19 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class MixFoodComponent implements OnInit {
 
   mixFoodData:any;
-  constructor(private http:HttpClient) { }
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
-    this.getDummyDataForFoodListings();
+   this.getAllFoodItems();
   }
 
 
-
-  getDummyDataForFoodListings()
-  {
-    this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe(res=>{
-      this.mixFoodData = res;
-      console.log(this.mixFoodData)
-    })
-  }
+getAllFoodItems()
+{
+this.api.getData("api/Food/getallfooditems").subscribe(res=>{
+ this.mixFoodData = res;
+});
+}
+ 
 }

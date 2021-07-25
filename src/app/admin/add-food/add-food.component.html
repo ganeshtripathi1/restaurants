@@ -1,1 +1,64 @@
-<p>add-food works!</p>
+<h1>Add Food</h1>
+
+<form [formGroup]="foodForm">
+
+
+<table>
+    <tr>
+        <td>
+            Name:-
+        </td>
+        <td>
+            <input type="text" formControlName="name">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Description:-
+        </td>
+        <td>
+            <textarea formControlName="description"></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Qty:-
+        </td>
+        <td>
+            <input type="number" formControlName="qty">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Image:-
+        </td>
+        <td>
+            <input type="file" formControlName="image" (change)="UploadImageConversion($event)">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            category:-
+        </td>
+        <td>
+            <select formControlName="cid">
+                <option selected value=1>Chinese</option>
+                <option value=2>local</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button (click)="addFoodForm()">submit</button>
+        </td>
+        
+    </tr>
+</table>
+</form>
+
+
+<img src="{{apiReturnBaseString}}">

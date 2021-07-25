@@ -2,11 +2,11 @@
 
 
 <div id="mixfoddlisting" class="row"  style="padding-left:3%; ">
-    <div class="card" style="width: 18rem;margin-left:9px;margin-top: 9px;" *ngFor="let data of mixFoodData">
-        <img class="card-img-top" src="https://source.unsplash.com/1600x900/?fruits" alt="Card image cap">
+    <div class="card" style="width: 18rem;margin-left:9px;margin-top: 9px;" *ngFor="let data of mixFoodData" [style.display]="(data.isAvailable==0)?'none':''">
+        <img class="card-img-top" src="{{data.image}}" alt="Card image cap" height="200px" width="100px" style="margin-top: 9px;">
         <div class="card-body">
-          <h5 class="card-title">SoyaBean Chill</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">{{data.name}}</h5>
+          <p class="card-text">{{data.description}}</p>
           <a href="#" class="btn btn-primary">Place Order</a>
         </div>
       </div>

@@ -15,6 +15,7 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
 import { AddFoodComponent } from './admin/add-food/add-food.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AddFoodComponent } from './admin/add-food/add-food.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
