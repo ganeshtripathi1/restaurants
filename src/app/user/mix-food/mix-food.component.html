@@ -1,12 +1,12 @@
 <h1>Mix Food Listings</h1>
 
-
 <div id="mixfoddlisting" class="row"  style="padding-left:3%; ">
-    <div class="card" style="width: 18rem;margin-left:9px;margin-top: 9px;" *ngFor="let data of mixFoodData" [style.display]="(data.isAvailable==0)?'none':''">
+    <div class="card" style="width: 18rem;margin-left:9px;margin-top: 9px;" *ngFor="let data of mixFoodData" [style.display]="(data.isAvailable==false)?'none':''">
         <img class="card-img-top" src="{{data.image}}" alt="Card image cap" height="200px" width="100px" style="margin-top: 9px;">
         <div class="card-body">
           <h5 class="card-title">{{data.name}}</h5>
           <p class="card-text">{{data.description}}</p>
+          <p class="card-text">Quatity:-{{data.qty}}</p>
           <a href="#" class="btn btn-primary">Place Order</a>
         </div>
       </div>

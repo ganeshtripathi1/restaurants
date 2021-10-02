@@ -1,3 +1,4 @@
+import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocalFoodComponent implements OnInit {
 
-  constructor() { }
+  localFoodItemCategoryId:number = 2;
+  localFoodItem:any;
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+    this.getFoodItemByCategory(this.localFoodItemCategoryId);
+  }
+
+  getFoodItemByCategory(categoryId: number) {
+
+    this.api.getData('api/Food/getFoodItemByCategory?id=' + categoryId).subscribe(res => {
+      this.localFoodItem = res;
+    })
   }
 
 }

@@ -16,6 +16,9 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
 import { AddFoodComponent } from './admin/add-food/add-food.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { ManageChiniseFoodComponent } from './admin/manage-chinise-food/manage-chinise-food.component';
+import { ManageLocalFoodComponent } from './admin/manage-local-food/manage-local-food.component';
+
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     AdminNavbarComponent,
     AddFoodComponent,
+    ManageChiniseFoodComponent,
+    ManageLocalFoodComponent,
+    
   
   ],
   imports: [

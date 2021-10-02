@@ -57,7 +57,9 @@ const routes: Routes = [
     path:'admin/addfood',
     component:AddFoodComponent,
     canActivate:[AdminAuthGuard]
-  }
+  },
+
+ 
 ];
 
 @NgModule({
